@@ -41,6 +41,12 @@ section {
     align-content: start;
 }
 
+div.additional-cities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+}
+
 li {
     background-color: aquamarine;
     margin: 5px;
