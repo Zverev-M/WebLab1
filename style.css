@@ -19,7 +19,11 @@ button.update {
 }
 
 .other-city-icon {
-    width: 25px;
+    width: 50px;
+    height: 50px;
+}
+
+.other-city-name {
     height: 25px;
 }
 
@@ -112,7 +116,7 @@ div.weather-icons {
 
 div.other-city {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     align-items: center;
     margin: 5px;
 }

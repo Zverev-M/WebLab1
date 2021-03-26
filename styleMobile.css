@@ -9,20 +9,22 @@
     button.update {
         border: solid 1px #000000;
         border-radius: 5px;
-        justify-self: center;
+        justify-self: right;
         align-self: center;
         background-color: white;
     }
 
     .current-city-icon {
-        width: 100px;
-        height: 100px;
-        justify-self: left;
+        width: 75px;
+        height: 75px;
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
     }
 
     .other-city-icon {
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
     }
 
     body {
@@ -77,7 +79,9 @@
 
     span.current-city-temperature {
         font-size: 48px;
-        justify-self: right;
+        justify-self: center;
+        grid-column-start: 2;
+        grid-column-end: 3;
     }
 
     span.other-city-temperature {
@@ -86,7 +90,7 @@
 
     div.current-city {
         display: grid;
-        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-columns: 1fr 1fr;
         grid-column-gap: 10px;
         margin: 5px;
         align-content: center;
@@ -95,6 +99,7 @@
     .current-city-name {
         grid-column-start: 1;
         grid-column-end: 3;
+        justify-self: center;
     }
 
     div.weather-icons {
@@ -106,15 +111,15 @@
     }
 
     .current-weather-list {
-        grid-column-start: 3;
-        grid-row-start: 1;
-        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
         align-self: center;
     }
 
     div.other-city {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 2fr 1fr 1fr 1fr;
         align-items: center;
         margin: 5px;
     }
@@ -126,9 +131,10 @@
 
     div.favorite {
         display: grid;
-        grid-template-columns: 3fr 2fr;
+        grid-template-columns: 1fr;
         margin: 5px;
         grid-column-gap: 5px;
+        justify-items: center;
     }
 
     div.other-city-title {
@@ -145,9 +151,16 @@
         justify-self: center;
     }
 
+    .grid-element-left {
+        justify-self: left;
+    }
+
     div.field-and-button {
-        justify-self: right;
+        display: grid;
+        grid-template-columns: 7fr 1fr;
+        grid-column-gap: 5px;
         align-self: center;
+        justify-self: center;
     }
 
     span.point {
@@ -160,12 +173,18 @@
     }
 
     img.update-button-mobile {
-        display: flex;
-        height: 50px;
+        display: block;
         width: 50px;
+        height: 50px;
     }
 
     span.update-button-desktop {
         display: none;
+    }
+
+    #fvr {
+        display: grid;
+        grid-template-columns: 1fr;
+        list-style-type: none;
     }
 }
