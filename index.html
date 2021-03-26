@@ -8,102 +8,48 @@
     <title>Lab1</title>
 </head>
 <body>
-    <div class="page">
-    <div class="beginning">
-        <h1>Погода здесь</h1>
-        <button class="update">Обновить геолокацию</button>
-    </div>
-
-
-    <div class="current-city">
-        <h2 class="current-city-name">Saint Petersburg</h2>
-
-        <ul class="current-weather-list">
-            <li><b>Ветер</b> 5.0 m/s</li>
-            <li><b>Облачность</b> Broken Clouds</li>
-            <li><b>Давление</b> 1000 hpa</li>
-            <li><b>Влажность</b> 50%</li>
-            <li><b>Координаты</b> [0.00, 0.00]</li>
-        </ul>
-
-        <img class="current-city-icon" src="weather.png" alt="" style="justify-self: center">
-        <span class="current-city-temperature" style="justify-self: center">8&#8451;</span>
-    </div>
-
-    <div class="favorite">
-        <h2>Избранное</h2>
-        <div class="grid-element-right"><textarea placeholder="Добавить новый город"></textarea></div>
-        <div class="grid-element-left"><button class="round">+</button></div>
-    </div>
-
     <main>
-        <div class="additional-cities">
-            <section>
-                <div class="other-city">
-                    <h3>Moscow</h3>
-                    <span class="other-city-temperature grid-element-right">5&#8451;</span>
-                    <img class="other-city-icon grid-element-center" src="weather.png">
-                    <button class="round grid-element-right">X</button>
-                    <ul class="other-city-list">
-                        <li><b>Ветер</b> 5.0 m/s</li>
-                        <li><b>Облачность</b> Broken Clouds</li>
-                        <li><b>Давление</b> 1000 hpa</li>
-                        <li><b>Влажность</b> 50%</li>
-                        <li><b>Координаты</b> [0.00, 0.00]</li>
-                    </ul>
+        <script src="index.js"></script>
+        <div class="">
+            <div class="beginning">
+                <h1>Погода здесь</h1>
+                <button class="update"><span class="update-button-desktop">Обновить геолокацию</span><img src="update.png" alt="" class="update-button-mobile"></button>
+            </div>
+
+
+            <div class="current-city">
+                <h2 class="current-city-name">Обновление геолокации...</h2>
+
+                <ul class="current-weather-list">
+                    <li class="inner-list"><span class="point">Ветер</span> <span class="value speed">...</span></li>
+                    <li class="inner-list"><span class="point">Облачность</span> <span class="value description">...</span></li>
+                    <li class="inner-list"><span class="point">Давление</span> <span class="value pressure">...</span></li>
+                    <li class="inner-list"><span class="point">Влажность</span> <span class="value humidity">...</span></li>
+                    <li class="inner-list"><span class="point">Координаты</span> <span class="value coords">...</span></li>
+                </ul>
+
+                <img class="current-city-icon" src="" alt="" style="justify-self: center">
+                <span class="current-city-temperature" style="justify-self: center">...</span>
+            </div>
+
+            <div class="favorite">
+                <h2>Избранное</h2>
+
+                <div class="field-and-button">
+                    <input placeholder="Добавить новый город" id="name">
+                    <button class="round" id="add">+</button>
                 </div>
-
-                <div class="other-city">
-                    <h3>Moscow</h3>
-                    <span class="other-city-temperature grid-element-right">5&#8451;</span>
-                    <img class="other-city-icon grid-element-center" src="weather.png">
-                    <button class="round grid-element-right">X</button>
-
-                    <ul class="other-city-list">
-                        <li><b>Ветер</b> 5.0 m/s</li>
-                        <li><b>Облачность</b> Broken Clouds</li>
-                        <li><b>Давление</b> 1000 hpa</li>
-                        <li><b>Влажность</b> 50%</li>
-                        <li><b>Координаты</b> [0.00, 0.00]</li>
-                    </ul>
-                </div>
-            </section>
-
-
-            <section>
-                <div class="other-city">
-                    <h3>Moscow</h3>
-                    <span class="other-city-temperature grid-element-right">5&#8451;</span>
-                    <img class="other-city-icon grid-element-center" src="weather.png">
-                    <button class="round grid-element-right">X</button>
-
-                    <ul class="other-city-list">
-                        <li><b>Ветер</b> 5.0 m/s</li>
-                        <li><b>Облачность</b> Broken Clouds</li>
-                        <li><b>Давление</b> 1000 hpa</li>
-                        <li><b>Влажность</b> 50%</li>
-                        <li><b>Координаты</b> [0.00, 0.00]</li>
-                    </ul>
-                </div>
-
-                <div class="other-city">
-                    <h3>Moscow</h3>
-                    <span class="other-city-temperature grid-element-right">5&#8451;</span>
-                    <img class="other-city-icon grid-element-center" src="weather.png">
-                    <button class="round grid-element-right">X</button>
-
-                    <ul class="other-city-list grid-element-left">
-                        <li><b>Ветер</b> 5.0 m/s</li>
-                        <li><b>Облачность</b> Broken Clouds</li>
-                        <li><b>Давление</b> 1000 hpa</li>
-                        <li><b>Влажность</b> 50%</li>
-                        <li><b>Координаты</b> [0.00, 0.00]</li>
-                    </ul>
-                </div>
-            </section>
+            </div>
         </div>
 
+        <div class="additional-cities">
+
+        </div>
+
+        <ul id="fvr">
+
+        </ul>
+
     </main>
-    </div>
 </body>
 </html>

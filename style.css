@@ -25,8 +25,14 @@ button.update {
 
 body {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 6fr 1fr;
     font-family: "Book Antiqua";
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-start: 2;
 }
 
 div.page {
@@ -47,19 +53,22 @@ div.additional-cities {
     align-content: center;
 }
 
-li {
+li.inner-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: aquamarine;
-    margin: 5px;
+    margin: 5px 0px;
 }
 
 ul {
     list-style-type: none;
     padding: 0px;
+    margin: 0px;
 }
 
 div.beginning {
     display: grid;
-    margin: 20px;
+    margin: 5px;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 10px;
 }
@@ -77,7 +86,7 @@ div.current-city {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     grid-column-gap: 10px;
-    margin: 20px;
+    margin: 5px;
     align-content: center;
 }
 
@@ -98,12 +107,14 @@ div.weather-icons {
     grid-column-start: 3;
     grid-row-start: 1;
     grid-row-end: 4;
+    align-self: center;
 }
 
 div.other-city {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
+    margin: 5px;
 }
 
 .other-city-list {
@@ -113,8 +124,8 @@ div.other-city {
 
 div.favorite {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    margin: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin: 5px;
     grid-column-gap: 5px;
 }
 
@@ -132,5 +143,37 @@ div.other-city-title {
     justify-self: center;
 }
 
+.grid-element-left {
+    justify-self: left;
+}
 
+div.field-and-button {
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    grid-column-gap: 5px;
+    justify-self: right;
+    align-self: center;
+}
 
+span.point {
+    font-weight: bold;
+    justify-self: left;
+}
+
+span.value {
+    justify-self: right;
+}
+
+img.update-button-mobile {
+    display: none;
+}
+
+span.update-button-desktop {
+    display: inline;
+}
+
+#fvr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style-type: none;
+}

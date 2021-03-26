@@ -11,6 +11,7 @@
         border-radius: 5px;
         justify-self: center;
         align-self: center;
+        background-color: white;
     }
 
     .current-city-icon {
@@ -26,41 +27,52 @@
 
     body {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 6fr 1fr;
         font-family: "Book Antiqua";
     }
 
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-start: 2;
+    }
+
     div.page {
+        grid-column-start: 2;
+        grid-column-end: 4;
     }
 
     section {
         display: grid;
         grid-template-columns: 1fr;
-        margin: 10px;
+        margin: 20px;
         align-content: start;
     }
 
     div.additional-cities {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         align-content: center;
     }
 
-    li {
+    li.inner-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         background-color: aquamarine;
-        margin: 5px;
+        margin: 5px 0px;
     }
 
     ul {
         list-style-type: none;
         padding: 0px;
+        margin: 0px;
     }
 
     div.beginning {
         display: grid;
-        margin: 10px;
+        margin: 5px;
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: 5px;
+        grid-column-gap: 10px;
     }
 
     span.current-city-temperature {
@@ -75,8 +87,8 @@
     div.current-city {
         display: grid;
         grid-template-columns: 1fr 1fr 2fr;
-        grid-column-gap: 5px;
-        margin: 10px;
+        grid-column-gap: 10px;
+        margin: 5px;
         align-content: center;
     }
 
@@ -97,12 +109,14 @@
         grid-column-start: 3;
         grid-row-start: 1;
         grid-row-end: 4;
+        align-self: center;
     }
 
     div.other-city {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         align-items: center;
+        margin: 5px;
     }
 
     .other-city-list {
@@ -112,8 +126,8 @@
 
     div.favorite {
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        margin: 10px;
+        grid-template-columns: 3fr 2fr;
+        margin: 5px;
         grid-column-gap: 5px;
     }
 
@@ -129,5 +143,29 @@
 
     .grid-element-center {
         justify-self: center;
+    }
+
+    div.field-and-button {
+        justify-self: right;
+        align-self: center;
+    }
+
+    span.point {
+        font-weight: bold;
+        justify-self: left;
+    }
+
+    span.value {
+        justify-self: right;
+    }
+
+    img.update-button-mobile {
+        display: flex;
+        height: 50px;
+        width: 50px;
+    }
+
+    span.update-button-desktop {
+        display: none;
     }
 }
